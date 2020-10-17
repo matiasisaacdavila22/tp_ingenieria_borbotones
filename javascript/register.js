@@ -24,10 +24,14 @@ $("#login").click( function() {
 $("#register").click( function() {
           location.href ="../views/register.html";
               });
+              
+$("#panel").click( function() {
+          location.href ="../views/panel.html";
+              });
 
 });
 
-function saludar() {
+function salir() {
     var nombre = $("#email").val();
     localStorage.setItem('email', email);
 }

@@ -5,7 +5,7 @@ $(document).ready(function() {
           $("#register").hide();
           $("#logout").show();
           $("#panel").show();
-    }else{
+          }else{
       $("#login").show();
       $("#register").show();
       $("#logout").hide();
@@ -14,7 +14,7 @@ $(document).ready(function() {
   $("#logout").click( function() {
             localStorage.removeItem('email');
             localStorage.clear();
-            location.reload();
+            location.href ="../views/home.html";
         });
 
 $("#login").click( function() {
@@ -23,6 +23,12 @@ $("#login").click( function() {
 
 $("#register").click( function() {
           location.href ="../views/register.html";
+              });
+$("#panel").click( function() {
+          location.href ="../views/panel.html";
+              });
+$("#obras").click( function() {
+          location.href ="../views/adminObras.html";
               });
 
 });
