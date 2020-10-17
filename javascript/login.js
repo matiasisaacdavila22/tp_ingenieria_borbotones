@@ -6,6 +6,9 @@ $(document).ready(function() {
 });
 
 function saludar() {
-    var nombre = $("#email").val();
+    var email = $("#email").val();
+    var name   = email.substring(0, email.lastIndexOf("@"));
+    var user = new User(name);
+    console.log(user.name);
     localStorage.setItem('email', email);
 }
