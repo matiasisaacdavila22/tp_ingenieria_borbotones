@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    var email = localStorage.getItem('email');
-    if ( email !=  null ) {
+    var isAuth = localStorage.getItem('isAuth');
+
+    if ( isAuth != null) {
           $("#login").hide();
           $("#register").hide();
           $("#logout").show();
@@ -12,8 +13,8 @@ $(document).ready(function() {
       $("#panel").hide();
         }
   $("#logout").click( function() {
-            localStorage.removeItem('email');
-            localStorage.clear();
+            localStorage.removeItem('isAuth');
+          //  localStorage.clear();
             location.href ="../views/home.html";
         });
 
@@ -24,16 +25,20 @@ $("#login").click( function() {
 $("#register").click( function() {
           location.href ="../views/register.html";
               });
+
 $("#panel").click( function() {
           location.href ="../views/panel.html";
               });
+
 $("#obras").click( function() {
-          location.href ="../views/adminObras.html";
+          location.href ="../views/obras/index.html";
               });
 
-});
+$("#ingresar").click( function() {
+        alert('fadsfsdfs');
+    });
 
-function saludar() {
-    var nombre = $("#email").val();
-    localStorage.setItem('email', email);
+});
+function salir() {
+  location.href ="../views/home.html";
 }

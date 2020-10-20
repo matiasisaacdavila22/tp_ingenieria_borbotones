@@ -1,21 +1,20 @@
 $(document).ready(function() {
-    var email = localStorage.getItem('email');
-    if ( email !=  null ) {
+    var isAuth = localStorage.getItem('isAuth');
+  
+    if ( isAuth !=  null ) {
           location.href ="../views/home.html";
         }
 });
 
-<<<<<<< HEAD
-function send() {
-    var nombre = $("#email").val();
-=======
 function saludar() {
-    var email = $("#email").val();
-    var name   = email.substring(0, email.lastIndexOf("@"));
-    var user = new User(name);
-    console.log(user.name);
->>>>>>> 455bf235b63ffb27abff288d1b83967325da5814
-    localStorage.setItem('email', email);
+    var nombre = $("#email").val();
+    var password = $('#password').val();
+    if(nombre == localStorage.getItem(nombre) && password == localStorage.getItem(password)){
+        localStorage.setItem('isAuth', true);
+    }else{
+      alert('nombre de usuario o password incorrecto!!!');
+    }
+
 }
 
 function salir() {
